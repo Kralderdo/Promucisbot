@@ -1,37 +1,43 @@
 {
-  "name": "Pro Music Bot",
-  "description": "Telegram YouTube Music Bot + PyTgCalls",
+  "name": "Prenses Music Bot",
+  "description": "YouTube destekli Telegram müzik botu + asistanlı sesli sohbet çalma sistemi (PyTgCalls).",
   "repository": "https://github.com/Kralderdo/Promucisbot",
-  "logo": "https://telegra.ph/file/cea8a6554a1e949661da8.jpg",
-  "keywords": ["telegram", "music", "bot", "pyrogram", "pytgcalls"],
+  "keywords": ["telegram", "music", "pytgcalls", "pyrogram", "youtube", "bot"],
   "env": {
     "API_ID": {
-      "description": "My.telegram.org üzerinden alınır",
+      "description": "my.telegram.org/apps adresinden alınır.",
       "required": true
     },
     "API_HASH": {
-      "description": "My.telegram.org üzerinden alınır",
+      "description": "my.telegram.org/apps adresinden alınır.",
       "required": true
     },
     "BOT_TOKEN": {
-      "description": "@BotFather'dan alınır",
+      "description": "@BotFather üzerinden alınır.",
       "required": true
     },
     "SESSION_STRING": {
-      "description": "Asistan hesabı için string session gereklidir",
+      "description": "Asistan hesabı için zorunludur. String Session girilecek.",
       "required": true
     },
     "YOUTUBE_API_KEY": {
-      "description": "YouTube Data API v3 anahtarı",
+      "description": "YouTube Data API v3 anahtarı (Google Cloud Console).",
       "required": true
     },
     "LOG_GROUP_ID": {
-      "description": "Log grubu ID (zorunlu değil)",
+      "description": "Logların atılacağı grup (zorunlu değil)",
+      "required": false,
       "value": "0"
     }
   },
   "buildpacks": [
     { "url": "heroku/python" },
     { "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest" }
-  ]
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }
