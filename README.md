@@ -48,3 +48,9 @@ python main.py
 ```
 
 — Derdo için özel: Hata olursa `LOG_GROUP_ID` ekleyip çıktıları oraya alabilirsiniz.
+
+
+### 🚀 Heroku Üzerinden Kurulum
+Aşağıdaki butona basarak botu Heroku'ya kolayca kurabilirsiniz:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kralderdo/Promucisbot/tree/main)
