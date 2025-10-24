@@ -1,0 +1,9 @@
+pyrogram==2.0.106
+tgcrypto
+pytgcalls==0.9.7
+yt-dlp>=2024.7.9
+pydantic>=2.6.0
+python-dotenv>=1.0.1
+aiohttp
+google-api-python-client>=2.141.0
+ffmpeg-python
