@@ -1,0 +1,37 @@
+{
+  "name": "Pro Music Bot",
+  "description": "Telegram YouTube Music Bot + PyTgCalls",
+  "repository": "https://github.com/Kralderdo/Promucisbot",
+  "logo": "https://telegra.ph/file/cea8a6554a1e949661da8.jpg",
+  "keywords": ["telegram", "music", "bot", "pyrogram", "pytgcalls"],
+  "env": {
+    "API_ID": {
+      "description": "My.telegram.org üzerinden alınır",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "My.telegram.org üzerinden alınır",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "@BotFather'dan alınır",
+      "required": true
+    },
+    "SESSION_STRING": {
+      "description": "Asistan hesabı için string session gereklidir",
+      "required": true
+    },
+    "YOUTUBE_API_KEY": {
+      "description": "YouTube Data API v3 anahtarı",
+      "required": true
+    },
+    "LOG_GROUP_ID": {
+      "description": "Log grubu ID (zorunlu değil)",
+      "value": "0"
+    }
+  },
+  "buildpacks": [
+    { "url": "heroku/python" },
+    { "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest" }
+  ]
+}
